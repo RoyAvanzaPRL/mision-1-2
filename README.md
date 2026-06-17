@@ -1,91 +1,69 @@
-# mision-1-hola-vue
+# mision-2-crud-todo
 
-Proyecto base de Vue 3 creado con Vite, Vue 3 y TypeScript.
-
-## Descripción
-
-Este repositorio contiene una aplicación sencilla de Vue 3 configurada con Vite y TypeScript. Incluye una estructura mínima y un componente interactivo de saludo (`HelloUser.vue`)
+Pequeña aplicación ToDo creada con Vue 3 y TypeScript. La app permite añadir tareas, marcarlas como hechas, eliminar tareas y conservarlas al recargar la página usando `localStorage`.
 
 ## Tecnologías
 
-- Vue 3 (`^3.5.34`)
-- Vite (`^8.0.12`)
-- TypeScript (`~6.0.2`)
-- Vue TypeScript Checker (`vue-tsc` `^3.2.8`)
-- Plugin oficial de Vue para Vite (`@vitejs/plugin-vue` `^6.0.6`)
+- Vue 3
+- TypeScript
+- Vite
+- `vue-tsc` para comprobación de tipos
 
-## Dependencias
+## Dependencias principales
 
-- `vue`
-
-## DevDependencies
-
-- `@types/node`
-- `@vitejs/plugin-vue`
-- `@vue/tsconfig`
-- `typescript`
-- `vite`
-- `vue-tsc`
-
-## Requisitos
-
-- Node.js 18 o superior
-- pnpm, npm o yarn (se recomienda `pnpm` si ya lo tienes instalado)
+- `vue`: `^3.5.34`
+- `vite`: `^8.0.12`
+- `typescript`: `~6.0.2`
+- `@vitejs/plugin-vue`: `^6.0.6`
+- `vue-tsc`: `^3.2.8`
+- `@types/node`: `^24.12.3`
 
 ## Instalación
 
-1. Clona el repositorio:
-
-```bash
-git clone https://github.com/<usuario>/mision-1-hola-vue.git
-cd mision-1-hola-vue
-```
-
-2. Instala las dependencias:
+Instala las dependencias con pnpm:
 
 ```bash
 pnpm install
 ```
 
-> Si usas npm:
-> ```bash
-> npm install
-> ```
+Si usas npm, ejecuta:
 
-> Si usas yarn:
-> ```bash
-> yarn install
-> ```
+```bash
+npm install
+```
 
 ## Ejecutar el proyecto
-
-Para levantar el servidor de desarrollo:
 
 ```bash
 pnpm dev
 ```
 
-Abre `http://localhost:5173` en tu navegador para ver la aplicación.
+Después abre la URL que indique Vite, normalmente `http://localhost:5173`.
 
-## Build de producción
-
-Para generar una versión de producción:
+## Construir para producción
 
 ```bash
 pnpm build
 ```
 
-Y para previsualizar el build:
+## Previsualizar la build
 
 ```bash
 pnpm preview
 ```
 
+## Qué hace el proyecto
+
+- Añade nuevas tareas
+- Marca las tareas como hechas
+- Elimina tareas
+- Guarda las tareas en `localStorage` para que se conserven al recargar la página
+
 ## Estructura principal
 
-- `index.html` - archivo principal de entrada
-- `src/main.ts` - punto de arranque de la aplicación
-- `src/App.vue` - componente raíz
-- `src/components/HelloUser.vue` - componente interactivo de saludo
-- `src/style.css` - estilos globales
-
+- `src/App.vue` — estado principal y lógica de tareas
+- `src/components/TaskForm.vue` — formulario para crear tareas
+- `src/components/TaskList.vue` — lista de tareas
+- `src/components/TaskItem.vue` — componente de cada tarea individual
+- `src/style.css` — estilos globales
+- `src/types.ts` — definición del tipo `Task`
